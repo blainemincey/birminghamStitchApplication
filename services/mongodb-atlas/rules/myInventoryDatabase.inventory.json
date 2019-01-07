@@ -1,0 +1,60 @@
+{
+    "database": "myInventoryDatabase",
+    "collection": "inventory",
+    "roles": [
+        {
+            "name": "sueRole",
+            "apply_when": {
+                "%%values.sueID": "%%user.id"
+            },
+            "fields": {
+                "available": {},
+                "color": {
+                    "read": true
+                },
+                "dateLastSold": {
+                    "read": true
+                },
+                "department": {
+                    "read": true
+                },
+                "price": {},
+                "productName": {
+                    "read": true
+                },
+                "sku": {}
+            },
+            "insert": false,
+            "delete": false,
+            "additional_fields": {
+                "read": true
+            }
+        },
+        {
+            "name": "joeID",
+            "apply_when": {
+                "%%values.joeID": "%%user.id"
+            },
+            "fields": {
+                "available": {},
+                "color": {},
+                "dateLastSold": {},
+                "department": {},
+                "price": {},
+                "productName": {},
+                "sku": {}
+            },
+            "read": true,
+            "insert": false,
+            "delete": false,
+            "additional_fields": {}
+        }
+    ],
+    "schema": {
+        "properties": {
+            "_id": {
+                "bsonType": "objectId"
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "postNewProductWebhook",
+    "run_as_user_id": "",
+    "run_as_user_id_script_source": "",
+    "options": {
+        "httpMethod": "POST",
+        "secret": "mySecret",
+        "validationMethod": "SECRET_AS_QUERY_PARAM"
+    },
+    "respond_result": true
+}
